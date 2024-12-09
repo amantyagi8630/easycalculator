@@ -12,6 +12,7 @@ class CustomTextButton extends StatelessWidget {
     required this.buttonLabel,
     this.buttonLabelColor,
     this.buttonTextSize,
+    this.boxShadow,
   });
 
   final double? buttonHeight;
@@ -21,11 +22,13 @@ class CustomTextButton extends StatelessWidget {
   final double? buttonTextSize;
   final String buttonLabel;
   final VoidCallback? onTap;
+  final List<BoxShadow>? boxShadow;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap ?? () {},
+      borderRadius: BorderRadius.circular(16),
       child: Container(
         width: buttonWidth ?? 62.w,
         height: buttonHeight ?? 40.h,
@@ -33,6 +36,7 @@ class CustomTextButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: buttonBackground ?? AppColors.appWhiteColor,
           borderRadius: BorderRadius.circular(16),
+          boxShadow: boxShadow ?? [],
         ),
         child: Text(
           buttonLabel,

@@ -1,4 +1,4 @@
-import 'package:easycalc/presentation/screens/splash.dart';
+import 'package:easycalc/presentation/screens/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             ),
             useMaterial3: true,
           ),
-          home: const Splash(),
+          home: const CalculatorScreen(),
         );
       },
     );
