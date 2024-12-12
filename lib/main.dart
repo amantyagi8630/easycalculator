@@ -1,4 +1,3 @@
-import 'package:easycalc/presentation/screens/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,14 +16,14 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Easy Calc',
+          title: 'Easy Calculator',
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(
               seedColor: Colors.deepPurple,
             ),
             useMaterial3: true,
           ),
-          home: const CalculatorScreen(),
+          home: null,
         );
       },
     );
