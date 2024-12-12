@@ -1,3 +1,6 @@
+// import 'package:easycalc/core/app_theme/app_theme.dart';
+import 'package:easycalc/core/colors/app_colors.dart';
+import 'package:easycalc/presentation/screens/calculator_screen/calculator_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,13 +20,11 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Easy Calculator',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.deepPurple,
-            ),
-            useMaterial3: true,
-          ),
-          home: null,
+          theme: ThemeData(scaffoldBackgroundColor: AppColors.appBlackColor),
+          // theme: AppTheme.appLightTheme,
+          // darkTheme: AppTheme.appDarkTheme,
+          // themeMode: mode,
+          home: CalculatorScreen(),
         );
       },
     );
