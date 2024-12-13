@@ -21,6 +21,7 @@ class CalculatorScreen extends StatelessWidget {
                 CalculatorButton(
                   label: 'Ac',
                   color: Color(0xff616161),
+                  textColor: Color(0xffA5A5A5),
                 ),
                 CalculatorIconButton(
                   icon: Icons.backspace_outlined,
@@ -53,47 +54,50 @@ class CalculatorScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20.h),
-            /* Row(
+            Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  children: [
-                    const ButtonRow(buttons: [
-                      CalculatorButton(label: '4'),
-                      CalculatorButton(label: '5'),
-                      CalculatorButton(label: '6'),
-                    ]),
-                    SizedBox(height: 20.h),
-                    const ButtonRow(
-                      buttons: [
-                        CalculatorButton(label: '1'),
-                        CalculatorButton(label: '2'),
-                        CalculatorButton(label: '3'),
-                      ],
-                    ),
-                    SizedBox(height: 20.h),
-                    /* Row(
-                      children: [
-                        Expanded(
-                          child: CalculatorButton(
-                            label: '0',
-                            width: 144.w,
-                          ),
-                        ),
-                        SizedBox(width: 20.w),
-                        const CalculatorButton(label: '.'),
-                      ],
-                    ), */
-                  ],
+                SizedBox(
+                  width: 226.w,
+                  child: Column(
+                    children: [
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CalculatorButton(label: '4'),
+                          CalculatorButton(label: '5'),
+                          CalculatorButton(label: '6'),
+                        ],
+                      ),
+                      SizedBox(height: 20.h),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CalculatorButton(label: '1'),
+                          CalculatorButton(label: '2'),
+                          CalculatorButton(label: '3'),
+                        ],
+                      ),
+                      SizedBox(height: 20.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CalculatorButton(label: '0', width: 131.w),
+                          const CalculatorButton(label: '.'),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(width: 20.w),
+                SizedBox(width: 19.w),
                 Column(
                   children: [
                     CalculatorButton(
                       label: '+',
                       height: 96.w,
+                      color: Color(0xff005DB2),
                     ),
-                    SizedBox(height: 34.h),
+                    SizedBox(height: 20.h),
                     CalculatorButton(
                       label: '=',
                       color: const Color(0xff1991FF),
@@ -103,7 +107,7 @@ class CalculatorScreen extends StatelessWidget {
                   ],
                 ),
               ],
-            ), */
+            ),
           ],
         ),
       ),
